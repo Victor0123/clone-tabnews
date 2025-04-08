@@ -1,0 +1,5 @@
+echo "Verificando secrets no commit..."
+
+npx secretlint "**/*"
+
+echo "Nenhum secret encontrado. Continuando o commit..."
