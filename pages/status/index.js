@@ -8,13 +8,8 @@ async function fetchAPI(key) {
 }
 
 export default function StatusPage() {
-  useSWR("/api/v1/status", fetchAPI, {
-    refreshInterval: 2000,
-  });
-
   return (
     <>
-      <h1>Status</h1>
       <Status />
     </>
   );
@@ -45,6 +40,7 @@ function Status() {
 
   return (
     <>
+      <h1>Status</h1>
       <div>Última atualização: {UpdatedAtText}</div>
       <h2>Database</h2>
       <div>{databaseStatus}</div>
