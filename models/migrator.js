@@ -12,7 +12,7 @@ async function connectionDatabase(request, response, next) {
     dryRun: true,
     dir: resolve("infra", "migrations"),
     direction: "up",
-    verbose: true,
+    log: () => {},
     migrationsTable: "pgmigrations",
   };
 
