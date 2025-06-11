@@ -4,7 +4,7 @@ import migrator from "models/migrator.js";
 
 const router = createRouter();
 
-router.use(migrator.connectionDatabase).get(getHandler).post(postHandler);
+router.get(getHandler).post(postHandler);
 
 export default router.handler(controller.errorHandlers);
 
